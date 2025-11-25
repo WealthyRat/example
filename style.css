@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0 0;
+
+}
+
+
+body {
+    color: black;
+}
+
+body.dark {
+    color: white;
+}
+
+body.dark .stats-followers-container .stats-page {
+    background-color: hsl(228, 28%, 20%);
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.dashboard-container .nav-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.63);
+    padding-inline: 5rem;
+    padding-block: 2rem;
+    padding-bottom: 10rem;
+}
+
+.nav-bar .dark-mode {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-bar .dark-mode .text-mode {
+    font-weight: bold;
+}
+
+.toggle-btn {
+    background: hsl(230, 22%, 74%);
+    width: 65px;
+    height: 35px;
+    position: relative;
+    border-radius: 2rem;
+    border: none;
+    transition: background 0.5s ease-in;
+}
+
+.toggle-btn:hover {
+    background: linear-gradient(to right, hsl(210, 79%, 56%), hsl(146, 68%, 55%));
+
+}
+
+.ball {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    transition: right 0.3s ease, background-color 0.3s ease;
+    
+    background-color: white;
+    width: 28px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid black;
+    z-index: 99;
+    margin-block: 0.3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-btn.active {
+    background: linear-gradient(to right, hsl(210, 79%, 56%), hsl(146, 68%, 55%));
+}
+
+.toggle-btn.active .ball {
+    right: 32px;
+    background-color: hsl(232, 19%, 15%);
+}
+
+.text-mode {
+    color: hsl(228, 12%, 44%)
+}
+
+.dark-mode.active .text-mode {
+    color: hsl(230, 22%, 74%)
+}
+
+/* main content */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+
+    padding-inline: 5rem;
+    padding-block: 2rem;
+    width: 100%;
+}
+
+.main-content .stats-followers-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 15%;
+    gap: 1rem;
+}
+
+.main-content .stats-followers-container .stats-page{
+    width: 280px;
+    height: 200px;
+    background-color: hsl(227, 47%, 96%);
+    border-radius: 0.4rem;
+    overflow: hidden;
+    
+}
+
+.main-content .stats-followers-container .stats-page:nth-child(1){
+    border-top: 4px solid hsl(208, 92%, 53%);
+}
+
+.main-content .stats-followers-container .stats-page:nth-child(2){
+    border-top: 4px solid hsl(203, 89%, 53%);
+}
+
+.main-content .stats-followers-container .stats-page:nth-child(3){
+    border-top: 4px solid;
+    border-image: linear-gradient(
+        to right,
+        hsl(37, 97%, 70%),
+        hsl(5, 77%, 71%),
+        hsl(329, 70%, 58%)
+      ) 1;
+}
+
+.main-content .stats-followers-container .stats-page:nth-child(4){
+    border-top: 4px solid hsl(348, 97%, 39%)
+}
